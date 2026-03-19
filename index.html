@@ -213,13 +213,14 @@
         }
         function closeDemo() { document.getElementById('demo-modal').style.display = 'none'; }
 
-        // --- 3. KHÁCH ẢO ---
-        const fakeNames = ["Chị Lan Anh", "Anh Tuấn", "Chị Thu Thảo", "Bác Minh", "Cô Hồng", "Anh Quốc Bảo", "Mẹ Sóc", "Bạn Đỗ Mẹ Ốc"];
+        // --- 3. KHÁCH ẢO (TỐI ƯU TỰ ĐỘNG) ---
+        const fakeNames = ["Chị Lan Anh", "Anh Tuấn", "Chị Thu Thảo", "Bác Minh", "Cô Hồng", "QUÂN 4:05"];
         const fakeBooks = [
             {t: "Tự học Toán 6", i: "hoc1.png"},
             {t: "Tự học Toán 2", i: "hoc2.png"},
             {t: "Tự học Toán 9", i: "hoc3.png"}
         ];
+
         function showOrder() {
             const toast = document.getElementById('fakeOrderToast');
             if(!toast) return;
@@ -231,13 +232,16 @@
             setTimeout(() => { toast.classList.remove('show'); }, 5000);
         }
 
+        // --- 4. KHỞI CHẠY ---
         window.onload = () => {
             updateSlider();
-            setTimeout(showOrder, 3000);
-            setInterval(showOrder, 12000);
+            setTimeout(showOrder, 3000); // 3 giây sau khi mở web là hiện khách ảo
+            setInterval(showOrder, 15000); // Sau đó cứ 15 giây hiện lại 1 lần
         };
         window.onresize = updateSlider;
-        window.onclick = (e) => { if (e.target == document.getElementById('demo-modal')) closeDemo(); }
+        window.onclick = (e) => { 
+            if (e.target == document.getElementById('demo-modal')) closeDemo(); 
+        }
     </script>
 </body>
 </html>
