@@ -46,224 +46,198 @@
 
     <section class="class-selection">
         <h2 class="section-title">BẠN ĐANG QUAN TÂM TOÁN LỚP MẤY?</h2>
-      <div class="class-grid">
-    <div class="class-item show" onclick="showDetails('lop2')">
-        <span class="class-number">02</span><span class="class-label">Toán Lớp 2</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop3')">
-        <span class="class-number">03</span><span class="class-label">Toán Lớp 3</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop4')">
-        <span class="class-number">04</span><span class="class-label">Toán Lớp 4</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop5')">
-        <span class="class-number">05</span><span class="class-label">Toán Lớp 5</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop6')">
-        <span class="class-number">06</span><span class="class-label">Toán Lớp 6</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop7')">
-        <span class="class-number">07</span><span class="class-label">Toán Lớp 7</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop8')">
-        <span class="class-number">08</span><span class="class-label">Toán Lớp 8</span>
-        <div class="check-icon">✓</div>
-    </div>
-    <div class="class-item show" onclick="showDetails('lop9')">
-        <span class="class-number">09</span><span class="class-label">Toán Lớp 9</span>
-        <div class="check-icon">✓</div>
-    </div>
-</div>
+        <div class="class-grid">
+            <div class="class-item show" onclick="showDetails('lop2')">
+                <span class="class-number">02</span><span class="class-label">Toán Lớp 2</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop3')">
+                <span class="class-number">03</span><span class="class-label">Toán Lớp 3</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop4')">
+                <span class="class-number">04</span><span class="class-label">Toán Lớp 4</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop5')">
+                <span class="class-number">05</span><span class="class-label">Toán Lớp 5</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop6')">
+                <span class="class-number">06</span><span class="class-label">Toán Lớp 6</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop7')">
+                <span class="class-number">07</span><span class="class-label">Toán Lớp 7</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop8')">
+                <span class="class-number">08</span><span class="class-label">Toán Lớp 8</span>
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="class-item show" onclick="showDetails('lop9')">
+                <span class="class-number">09</span><span class="class-label">Toán Lớp 9</span>
+                <div class="check-icon">✓</div>
+            </div>
+        </div>
     </section>
 
-    <section id="class-details-container" class="class-details" style="display: none;">
+    <section id="class-details-container" class="class-details" style="display: none; position: relative;">
         <div class="details-content">
             <button class="close-btn" onclick="closeDetails()">× Đóng</button>
+            
             <div id="content-lop2" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 2</h2>
-    <div class="lesson-list">
-        <div class="lesson-item" style="cursor: pointer;" onclick="openDemo('Tự Học Toán 2', '460.000đ', '390.000đ')">
-    <span>TỰ HỌC TOÁN 2:</span> TỪ CƠ BẢN ĐẾN NÂNG CAO (Bấm để xem thử)
-</div>
-
-<div id="content-lop3" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 3</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Ôn tập và bổ sung</div>
-        <div class="lesson-item"><span>Chương 2:</span> Phép nhân, phép chia trong phạm vi 1000</div>
-    </div>
-</div>
-
-<div id="content-lop4" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 4</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Số tự nhiên. Bảng đơn vị đo khối lượng</div>
-    </div>
-</div>
-
-<div id="content-lop5" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 5</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Ôn tập phân số. Giải toán tỉ lệ</div>
-    </div>
-</div>
-
-<div id="content-lop6" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 6</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Số tự nhiên</div>
-        <div class="lesson-item"><span>Chương 2:</span> Số nguyên</div>
-    </div>
-</div>
-
-<div id="content-lop7" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 7</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Số hữu tỉ</div>
-        <div class="lesson-item"><span>Chương 2:</span> Số thực</div>
-    </div>
-</div>
-
-<div id="content-lop8" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 8</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Đa thức</div>
-        <div class="lesson-item"><span>Chương 2:</span> Phân thức đại số</div>
-    </div>
-</div>
-
-<div id="content-lop9" class="class-content" style="display:none;">
-    <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 9</h2>
-    <div class="lesson-list">
-        <div class="lesson-item"><span>Chương 1:</span> Phương trình và Hệ phương trình</div>
-        <div class="lesson-item"><span>Chương 2:</span> Đường tròn</div>
-    </div>
-</div>
-    </section>
-
-    <section class="testimonials">
-    <h2 class="section-title">PHỤ HUYNH & HỌC SINH NÓI GÌ?</h2>
-    <div class="testimonial-container">
-        <div class="testimonial-track">
-            <div class="testimonial-item">
-                <div class="stars">★★★★★</div>
-                <p>"Nhờ bộ sách của Thầy mà con tôi từ sợ Toán đã trở nên tự tin hơn, điểm số cải thiện rõ rệt qua từng tháng."</p>
-                <div class="user-info">
-                    <img src="hoc4.webp" alt="Avatar">
-                    <div>
-                        <h4>Chị Lan Anh</h4>
-                        <span>Phụ huynh lớp 6</span>
+                <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 2</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item" onclick="openDemo('Tự Học Toán 2', '460.000đ', '390.000đ')">
+                        <span>TỰ HỌC TOÁN 2:</span> TỪ CƠ BẢN ĐẾN NÂNG CAO (Bấm để xem thử)
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-item">
-                <div class="stars">★★★★★</div>
-                <p>"Cách giải toán của Thầy rất độc đáo, ngắn gọn và dễ hiểu. Em đã đỗ vào trường cấp 3 mơ ước nhờ Thầy."</p>
-                <div class="user-info">
-                    <img src="hoc4.webp" alt="Avatar">
-                    <div>
-                        <h4>Hoàng Nam</h4>
-                        <span>Học sinh lớp 9</span>
-                    </div>
+            <div id="content-lop3" class="class-content" style="display:none;">
+                <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 3</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item"><span>Chương 1:</span> Ôn tập và bổ sung</div>
                 </div>
             </div>
-
-            <div class="testimonial-item">
-                <div class="stars">★★★★★</div>
-                <p>"Tài liệu trình bày rất đẹp, tư duy logic giúp các bé tiểu học tiếp cận toán học một cách tự nhiên nhất."</p>
-                <div class="user-info">
-                    <img src="hoc4.webp" alt="Avatar">
-                    <div>
-                        <h4>Anh Quốc Bảo</h4>
-                        <span>Phụ huynh lớp 2</span>
-                    </div>
+            <div id="content-lop6" class="class-content" style="display:none;">
+                <h2 class="gold-text">LỘ TRÌNH TOÁN LỚP 6</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item"><span>Chương 1:</span> Số tự nhiên</div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<a href="https://zalo.me/0793993719" class="zalo-float" target="_blank">
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">PHỤ HUYNH & HỌC SINH NÓI GÌ?</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-track">
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Nhờ bộ sách của Thầy mà con tôi từ sợ Toán đã trở nên tự tin hơn."</p>
+                    <div class="user-info">
+                        <img src="hoc4.webp" alt="Avatar">
+                        <div><h4>Chị Lan Anh</h4><span>Phụ huynh lớp 6</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Cách giải toán của Thầy rất độc đáo, ngắn gọn và dễ hiểu."</p>
+                    <div class="user-info">
+                        <img src="hoc4.webp" alt="Avatar">
+                        <div><h4>Anh Tuấn</h4><span>Phụ huynh</span></div>
+                    </div>
+                </div>
+               <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Cách giải toán của Thầy rất độc đáo, ngắn gọn và dễ hiểu."</p>
+                    <div class="user-info">
+                        <img src="hoc4.webp" alt="Avatar">
+                        <div><h4>QUÂN</h4><span>Phụ huynh</span></div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://zalo.me/0793993719" class="zalo-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
         <span>Tư vấn ngay</span>
     </a>
 
-    <script>
-        // SCRIPT CHO SLIDER
-        let slideIndex = 1;
-        const track = document.getElementById('sliderTrack');
-        const items = document.querySelectorAll('.slide-item');
+    <div id="demo-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal-btn" onclick="closeDemo()">&times;</span>
+            <h2 class="gold-text" id="demo-title">Xem thử sách</h2>
+            <div class="demo-slider">
+                <img src="1.png" alt="Trang 1">
+                <img src="2.png" alt="Trang 2">
+                <img src="3.png" alt="Trang 3">
+            </div>
+            <div class="modal-footer">
+                <div class="price-container">
+                    <span id="old-price" class="old-price">460.000đ</span>
+                    <span id="demo-price" class="price-text">390.000đ</span>
+                    <span class="sale-badge">GIẢM 15%</span>
+                </div>
+                <a href="https://zalo.me/0793993719" target="_blank" class="buy-now-btn">MUA NGAY QUA ZALO</a>
+            </div>
+        </div>
+    </div>
 
+    <div id="fakeOrderToast">
+        <div class="order-book-img">
+            <img src="hoc1.png" id="fakeOrderImg" alt="Sách">
+        </div>
+        <div class="order-info">
+            <p id="fakeOrderText">Bạn <b>Chị Lan Anh</b> vừa mua <b>Toán Lớp 6 Tư Duy</b></p>
+            <span class="order-time">Vừa xong</span>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. SLIDER ---
+        let slideIndex = 1;
         function updateSlider() {
+            const track = document.getElementById('sliderTrack');
+            const items = document.querySelectorAll('.slide-item');
+            if(!track || items.length === 0) return;
             const containerWidth = document.querySelector('.slider-container').offsetWidth;
             const itemWidth = items[0].offsetWidth;
             const centerOffset = (containerWidth / 2) - (itemWidth / 2);
             const moveX = - (slideIndex * (itemWidth + 20)) + centerOffset;
             track.style.transform = `translateX(${moveX}px)`;
-            items.forEach((item, i) => {
-                item.classList.toggle('active', i === slideIndex);
-            });
+            items.forEach((item, i) => { item.classList.toggle('active', i === slideIndex); });
         }
-
         function moveSlide(step) {
+            const items = document.querySelectorAll('.slide-item');
             slideIndex = Math.max(0, Math.min(items.length - 1, slideIndex + step));
             updateSlider();
         }
 
-        // SCRIPT CHO CHỌN LỚP
+        // --- 2. CHỌN LỚP & MODAL ---
         function showDetails(classId) {
             document.getElementById('class-details-container').style.display = 'block';
             document.querySelectorAll('.class-content').forEach(c => c.style.display = 'none');
-            document.getElementById('content-' + classId).style.display = 'block';
+            const target = document.getElementById('content-' + classId);
+            if(target) target.style.display = 'block';
             document.getElementById('class-details-container').scrollIntoView({ behavior: 'smooth' });
         }
         function closeDetails() { document.getElementById('class-details-container').style.display = 'none'; }
+        
+        function openDemo(title, oldPrice, newPrice) {
+            document.getElementById('demo-title').innerText = "Xem thử: " + title;
+            document.getElementById('old-price').innerText = oldPrice; 
+            document.getElementById('demo-price').innerText = newPrice; 
+            document.getElementById('demo-modal').style.display = 'flex';
+        }
+        function closeDemo() { document.getElementById('demo-modal').style.display = 'none'; }
 
-        window.onload = updateSlider;
+        // --- 3. KHÁCH ẢO ---
+        const fakeNames = ["Chị Lan Anh", "Anh Tuấn", "Chị Thu Thảo", "Bác Minh", "Cô Hồng", "Anh Quốc Bảo", "Mẹ Sóc", "Bạn Đỗ Mẹ Ốc"];
+        const fakeBooks = [
+            {t: "Tự học Toán 6", i: "hoc1.png"},
+            {t: "Tự học Toán 2", i: "hoc2.png"},
+            {t: "Tự học Toán 9", i: "hoc3.png"}
+        ];
+        function showOrder() {
+            const toast = document.getElementById('fakeOrderToast');
+            if(!toast) return;
+            const name = fakeNames[Math.floor(Math.random() * fakeNames.length)];
+            const book = fakeBooks[Math.floor(Math.random() * fakeBooks.length)];
+            document.getElementById('fakeOrderText').innerHTML = 'Bạn <b>' + name + '</b> vừa mua <b>' + book.t + '</b>';
+            document.getElementById('fakeOrderImg').src = book.i;
+            toast.classList.add('show');
+            setTimeout(() => { toast.classList.remove('show'); }, 5000);
+        }
+
+        window.onload = () => {
+            updateSlider();
+            setTimeout(showOrder, 3000);
+            setInterval(showOrder, 12000);
+        };
         window.onresize = updateSlider;
+        window.onclick = (e) => { if (e.target == document.getElementById('demo-modal')) closeDemo(); }
     </script>
-<div id="demo-modal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close-modal-btn" onclick="closeDemo()">&times;</span>
-        
-        <h2 class="gold-text" id="demo-title">Xem thử sách</h2>
-        
-        <div class="demo-slider">
-            <img src="1.png" alt="Trang 1">
-            <img src="2.png" alt="Trang 2">
-            <img src="3.png" alt="Trang 3">
-        </div>
-
-       <div class="modal-footer">
-    <div class="price-container">
-        <span id="old-price" class="old-price">460.000đ</span>
-        <span id="demo-price" class="price-text">390.000đ</span>
-        <span class="sale-badge">GIẢM 15%</span>
-    </div>
-    <a href="https://zalo.me/0793993719" target="_blank" class="buy-now-btn">MUA NGAY QUA ZALO</a>
-</div>
-<script>
-function openDemo(title, oldPrice, newPrice) {
-    document.getElementById('demo-title').innerText = "Xem thử: " + title;
-    document.getElementById('old-price').innerText = oldPrice; 
-    document.getElementById('demo-price').innerText = newPrice; 
-    document.getElementById('demo-modal').style.display = 'flex';
-}
-
-    function closeDemo() {
-        document.getElementById('demo-modal').style.display = 'none';
-    }
-
-    // Đóng khi bấm ra ngoài vùng đen
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('demo-modal')) closeDemo();
-    }
-</script>
 </body>
 </html>
