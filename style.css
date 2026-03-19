@@ -1,12 +1,10 @@
+/* GIỮ NGUYÊN CÁC PHẦN TRÊN CỦA THẦY */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #0a0a0a; color: #fff; overflow-x: hidden; }
-
-/* Menu & Hero */
 nav { display: flex; justify-content: space-between; padding: 20px 10%; align-items: center; }
 .logo { color: #d4af37; font-weight: 800; font-size: 1.5rem; font-family: 'Montserrat'; }
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav ul li a { color: #fff; text-decoration: none; font-size: 0.8rem; }
-
 .hero { display: flex; align-items: center; padding: 50px 10%; min-height: 70vh; gap: 30px; }
 .hero-content, .hero-image { flex: 1; }
 .hero-content h1 { font-size: 3rem; font-family: 'Montserrat'; margin: 15px 0; }
@@ -14,7 +12,6 @@ nav ul li a { color: #fff; text-decoration: none; font-size: 0.8rem; }
 .hero-image img { width: 100%; max-width: 400px; border: 1px solid #d4af37; padding: 10px; border-radius: 10px; }
 .btn-discover { display: inline-block; padding: 12px 25px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
 
-/* Slider Sách */
 .special-slider { position: relative; padding: 50px 0; background: #000; }
 .slider-container { width: 100%; overflow: hidden; padding: 40px 0; }
 .slider-track { display: flex; gap: 20px; transition: 0.5s ease-out; align-items: center; }
@@ -24,7 +21,6 @@ nav ul li a { color: #fff; text-decoration: none; font-size: 0.8rem; }
 .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: 1px solid #d4af37; color: #d4af37; padding: 10px 15px; cursor: pointer; border-radius: 50%; }
 .prev { left: 5%; } .next { right: 5%; }
 
-/* Grid chọn lớp */
 .class-selection { padding: 60px 10%; text-align: center; }
 .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 30px; }
 .class-item { background: #111; border: 1px solid #333; padding: 30px 15px; cursor: pointer; border-radius: 15px; position: relative; transition: 0.3s; }
@@ -35,250 +31,71 @@ nav ul li a { color: #fff; text-decoration: none; font-size: 0.8rem; }
 .check-icon { position: absolute; top: 10px; right: 10px; background: #d4af37; color: #000; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; opacity: 0; }
 .class-item:hover .check-icon { opacity: 1; }
 
-/* Chi tiết lộ trình */
 .class-details { padding: 50px 10%; background: #0f0f0f; border-top: 2px solid #d4af37; }
 .lesson-item { background: #1a1a1a; padding: 20px; border-left: 4px solid #d4af37; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
 .lesson-item:hover { background: #222; }
 .gold-text { color: #d4af37; margin-bottom: 20px; }
 .close-btn { position: absolute; top: -40px; right: 0; background: none; color: #888; border: none; cursor: pointer; }
 
-/* POPUP XEM THỬ (Bản sửa lỗi cuộn và nút đóng) */
-.modal {
-    position: fixed; 
-    z-index: 9999; 
-    left: 0; top: 0;
-    width: 100%; height: 100%; 
-    background: rgba(0,0,0,0.9);
-    display: none; 
-    align-items: center; 
-    justify-content: center;
-    padding: 20px; /* Khoảng cách để không dính sát mép màn hình */
-}
-
-.modal-content {
-    background: #111; 
-    border: 1px solid #d4af37; 
-    padding: 30px;
-    width: 100%; 
-    max-width: 800px; 
-    max-height: 90vh; /* Giới hạn chiều cao tối đa 90% màn hình */
-    border-radius: 15px; 
-    position: relative;
-    overflow-y: auto; /* QUAN TRỌNG: Cho phép lướt xuống để xem hết nội dung */
-}
-
-/* Nút Đóng (X) ở góc Thầy đánh dấu */
-.close-modal-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: #fff;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 100;
-    line-height: 1;
-}
+.modal { position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-content { background: #111; border: 1px solid #d4af37; padding: 30px; width: 100%; max-width: 800px; max-height: 90vh; border-radius: 15px; position: relative; overflow-y: auto; }
+.close-modal-btn { position: absolute; top: 15px; right: 20px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; z-index: 100; line-height: 1; }
 .close-modal-btn:hover { color: #d4af37; }
+.demo-slider { display: flex; gap: 15px; overflow-x: auto; padding: 20px 0; margin-bottom: 20px; scrollbar-width: thin; }
+.demo-slider img { height: 450px; flex-shrink: 0; border-radius: 5px; border: 1px solid #333; }
 
-/* Dải ảnh Demo nằm ngang mượt mà */
-.demo-slider {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto; /* Lướt ngang xem ảnh */
-    padding: 20px 0;
-    margin-bottom: 20px;
-    scrollbar-width: thin; /* Làm thanh cuộn gọn hơn */
-}
-.demo-slider img {
-    height: 450px; /* Thầy có thể chỉnh 350px nếu muốn nhỏ hơn */
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 1px solid #333;
-}
+.price-container { margin: 15px 0 25px 0; display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.old-price { color: #888; text-decoration: line-through; font-size: 1.2rem; font-weight: 400; }
+.price-text { color: #d4af37; font-size: 2.2rem; font-weight: 800; text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+.sale-badge { background: #ff4d4d; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
-.price-text { color: #d4af37; font-size: 1.6rem; font-weight: bold; margin-bottom: 20px; }
-
-.buy-now-btn {
-    display: block;
-    background: #d4af37;
-    color: #000;
-    padding: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/* Zalo */
+.buy-now-btn { display: block; background: #d4af37; color: #000; padding: 18px; text-decoration: none; font-weight: bold; border-radius: 8px; text-align: center; font-size: 1.1rem; }
 .zalo-float { position: fixed; bottom: 20px; right: 20px; background: #0068ff; color: #fff; padding: 10px 20px; border-radius: 50px; display: flex; align-items: center; text-decoration: none; z-index: 1000; }
 .zalo-float img { width: 25px; margin-right: 10px; }
-/* Container chứa giá */
-.price-container {
-    margin: 15px 0 25px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
 
-/* Kiểu giá cũ: Gạch ngang và mờ đi */
-.old-price {
-    color: #888;
-    text-decoration: line-through; /* Dòng gạch ngang quan trọng nhất */
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-/* Kiểu giá mới: To, màu vàng và sáng */
-.price-text {
-    color: #d4af37;
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-}
-
-/* Nhãn Sale màu đỏ hoặc cam cho nổi bật */
-.sale-badge {
-    background: #ff4d4d;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    animation: pulse 1.5s infinite; /* Hiệu ứng nhấp nháy thu hút */
-}
-
-/* Hiệu ứng nhịp tim cho nhãn Sale */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-/* TESTIMONIALS - PHẢN HỒI */
-.testimonials {
-    padding: 80px 10%;
-    background: #050505;
-    text-align: center;
-}
-
-.testimonial-container {
-    overflow-x: auto;
-    padding: 20px 0;
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-}
-.testimonial-container::-webkit-scrollbar { display: none; } /* Ẩn thanh cuộn trên Chrome/Safari */
-
-.testimonial-track {
-    display: flex;
-    gap: 25px;
-}
-
-.testimonial-item {
-    background: #111;
-    border: 1px solid #222;
-    padding: 30px;
-    border-radius: 20px;
-    min-width: 320px;
-    max-width: 320px;
-    text-align: left;
-    transition: 0.3s;
-}
-.testimonial-item:hover {
-    border-color: #d4af37;
-    transform: translateY(-10px);
-}
-
+.testimonials { padding: 80px 10%; background: #050505; text-align: center; }
+.testimonial-container { overflow-x: auto; padding: 20px 0; scrollbar-width: none; }
+.testimonial-container::-webkit-scrollbar { display: none; }
+.testimonial-track { display: flex; gap: 25px; }
+.testimonial-item { background: #111; border: 1px solid #222; padding: 30px; border-radius: 20px; min-width: 320px; max-width: 320px; text-align: left; transition: 0.3s; }
+.testimonial-item:hover { border-color: #d4af37; transform: translateY(-10px); }
 .stars { color: #d4af37; margin-bottom: 15px; font-size: 1.2rem; }
-
-.testimonial-item p {
-    color: #ccc;
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.user-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #d4af37;
-}
+.testimonial-item p { color: #ccc; font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+.user-info { display: flex; align-items: center; gap: 15px; }
+.user-info img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid #d4af37; }
 .user-info h4 { color: #fff; margin: 0; font-size: 1rem; }
 .user-info span { color: #888; font-size: 0.85rem; }
 
-/* =========================================
-   PHẦN CSS CHO THÔNG BÁO MUA HÀNG ẢO (SOCIAL PROOF)
-   ========================================= */
+/* CSS THÔNG BÁO MUA HÀNG - SỬA LỖI HIỂN THỊ */
 .fake-order-toast {
     position: fixed;
     bottom: 25px;
-    left: 20px; /* Góc dưới bên trái */
+    left: 20px;
     background: #1a1a1a;
-    border: 1px solid #d4af37; /* Viền vàng gold tông xuyệt tông */
+    border: 1px solid #d4af37;
     padding: 12px 18px;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.8);
     display: flex;
     align-items: center;
     gap: 15px;
-    z-index: 8888; /* Nằm dưới Zalo và Modal một chút */
-    
-    /* Ẩn ban đầu bằng cách đẩy ra ngoài màn hình */
-    transform: translateX(-150%);
-    transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Hiệu ứng thò thụt mượt mà */
-    
-    pointer-events: none; /* Không cho click vào để đỡ phiền */
-    max-width: 300px;
+    z-index: 5000;
+    transform: translateX(-150%); /* Đẩy ra ngoài màn hình bên trái */
+    transition: 0.8s ease-in-out;
+    max-width: 320px;
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* Lớp này dùng để hiện thông báo */
 .fake-order-toast.show {
-    transform: translateX(0);
+    transform: translateX(0); /* Kéo vào màn hình */
+    opacity: 1;
+    visibility: visible;
 }
 
-.order-book-img {
-    width: 40px;
-    height: 55px;
-    overflow: hidden;
-    border-radius: 5px;
-    flex-shrink: 0;
-    border: 1px solid #333;
-}
-
-.order-book-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.order-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.order-info p {
-    color: #fff;
-    font-size: 0.8rem;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.order-info b {
-    color: #d4af37; /* Tên khách hàng và tên sách màu vàng */
-}
-
-.order-time {
-    color: #888;
-    font-size: 0.7rem;
-    margin-top: 3px;
-    display: block;
-}
+.order-book-img { width: 45px; height: 60px; flex-shrink: 0; border-radius: 4px; overflow: hidden; border: 1px solid #333; }
+.order-book-img img { width: 100%; height: 100%; object-fit: cover; }
+.order-info p { color: #fff; font-size: 0.85rem; margin: 0; line-height: 1.4; }
+.order-info b { color: #d4af37; }
+.order-time { color: #888; font-size: 0.75rem; margin-top: 4px; display: block; }
