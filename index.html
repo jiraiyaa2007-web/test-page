@@ -189,6 +189,17 @@
         </div>
     </div>
 </section>
+
+<div class="fake-order-toast" id="fakeOrderToast">
+    <div class="order-book-img">
+        <img src="hoc1.png" id="fakeOrderImg" alt="Bìa sách">
+    </div>
+    <div class="order-info">
+        <p id="fakeOrderText">Bạn **Trần Văn A** vừa mua **Sách Toán Tư Duy**</p>
+        <span class="order-time" id="fakeOrderTime">Cách đây 2 phút</span>
+    </div>
+</div>
+
 <a href="https://zalo.me/0793993719" class="zalo-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
         <span>Tư vấn ngay</span>
@@ -248,6 +259,7 @@
     </div>
     <a href="https://zalo.me/0793993719" target="_blank" class="buy-now-btn">MUA NGAY QUA ZALO</a>
 </div>
+
 <script>
 function openDemo(title, oldPrice, newPrice) {
     document.getElementById('demo-title').innerText = "Xem thử: " + title;
@@ -265,5 +277,51 @@ function openDemo(title, oldPrice, newPrice) {
         if (event.target == document.getElementById('demo-modal')) closeDemo();
     }
 </script>
+
+<script>
+    // 1. Dữ liệu ngẫu nhiên
+    const fakeNames = ["Nguyễn Thị Lan", "Trần Văn Dũng", "Phạm Minh Tuấn", "Phan Lê Vy", "Hoàng Thu Thảo", "Đặng Quốc Bảo", "Đỗ Mẹ Ốc"];
+    const fakeBooks = [
+        {title: "Toán Lớp 6 Tư Duy", img: "hoc1.png"},
+        {title: "Tự học Toán 2", img: "hoc2.png"},
+        {title: "Lộ trình cấp tốc Lớp 9", img: "hoc3.png"}
+    ];
+    const fakeTimes = ["3 phút trước", "Vừa xong", "5 phút trước", "2 phút trước", "1 phút trước"];
+
+    // 2. Hàm lấy phần tử ngẫu nhiên
+    function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    const toast = document.getElementById('fakeOrderToast');
+    const toastText = document.getElementById('fakeOrderText');
+    const toastImg = document.getElementById('fakeOrderImg');
+    const toastTime = document.getElementById('fakeOrderTime');
+
+    // 3. Hàm hiển thị thông báo
+    function showNotif() {
+        const name = getRandom(fakeNames);
+        const book = getRandom(fakeBooks);
+        const time = getRandom(fakeTimes);
+
+        // Cập nhật nội dung
+        toastText.innerHTML = `Bạn <b>${name}</b> vừa mua **${book.title}**`;
+        toastImg.src = book.img;
+        toastTime.innerText = time;
+
+        // Hiện ra
+        toast.classList.add('show');
+
+        // Tự ẩn sau 6 giây
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 6000);
+    }
+
+    // 4. Thiết lập thời gian lặp lại (Lần đầu sau 4s, sau đó mỗi 15s hiện lại)
+    setTimeout(showNotif, 4000); 
+    setInterval(showNotif, 15000); 
+</script>
+
 </body>
 </html>

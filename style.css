@@ -214,3 +214,71 @@ nav ul li a { color: #fff; text-decoration: none; font-size: 0.8rem; }
 }
 .user-info h4 { color: #fff; margin: 0; font-size: 1rem; }
 .user-info span { color: #888; font-size: 0.85rem; }
+
+/* =========================================
+   PHẦN CSS CHO THÔNG BÁO MUA HÀNG ẢO (SOCIAL PROOF)
+   ========================================= */
+.fake-order-toast {
+    position: fixed;
+    bottom: 25px;
+    left: 20px; /* Góc dưới bên trái */
+    background: #1a1a1a;
+    border: 1px solid #d4af37; /* Viền vàng gold tông xuyệt tông */
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 8888; /* Nằm dưới Zalo và Modal một chút */
+    
+    /* Ẩn ban đầu bằng cách đẩy ra ngoài màn hình */
+    transform: translateX(-150%);
+    transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Hiệu ứng thò thụt mượt mà */
+    
+    pointer-events: none; /* Không cho click vào để đỡ phiền */
+    max-width: 300px;
+}
+
+/* Lớp này dùng để hiện thông báo */
+.fake-order-toast.show {
+    transform: translateX(0);
+}
+
+.order-book-img {
+    width: 40px;
+    height: 55px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    border: 1px solid #333;
+}
+
+.order-book-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-info p {
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.order-info b {
+    color: #d4af37; /* Tên khách hàng và tên sách màu vàng */
+}
+
+.order-time {
+    color: #888;
+    font-size: 0.7rem;
+    margin-top: 3px;
+    display: block;
+}
